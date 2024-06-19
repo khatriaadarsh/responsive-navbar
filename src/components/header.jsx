@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
-
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+   <>
+<nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
         <span className="font-semibold text-xl tracking-tight">Portfolio</span>
       </div>
@@ -26,12 +26,15 @@ const Header = () => {
           <a href="#about" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 pl-60">
             About
           </a>
+    
           <a href="#projects" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white pl-60">
             Projects
           </a>
         </div>
       </div>
     </nav>
+   </>
+
   );
 };
 export default Header;
